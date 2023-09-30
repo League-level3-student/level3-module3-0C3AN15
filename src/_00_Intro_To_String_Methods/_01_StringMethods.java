@@ -59,11 +59,30 @@ public class _01_StringMethods {
     // You cannot assume there are no extra spaces around the name, but you can
     // assume there is only one space between the first and last name
     public static String lineLeader(String s1, String s2, String s3) {
-    	
-    	//System.out.println(s1 + s2 + s3);
-    	
-    	
-        return null;
+    	    	
+    	s1 = s1.trim();
+    	s2 = s2.trim();
+    	s3 = s3.trim();
+    	int r1 = s1.lastIndexOf(" ")+1;
+    	int r2 = s2.indexOf(" ")+1;
+    	int r3 = s3.indexOf(" ")+1;
+    	int r6 = 10/10;
+    	char c1 = s1.charAt(r1);
+    	char c2 = s2.charAt(r2);
+    	char c3 = s3.charAt(r3);
+    	int i1 = Character.getNumericValue(c1);
+    	int i2 = Character.getNumericValue(c2);
+    	int i3 = Character.getNumericValue(c3);
+    	    	
+    	if(i1 < i2 & i1 < i3) {
+    		return s1;
+    	}
+    	else if(i2 < i3 & i2 < i1) {
+    		return s2;
+    	}
+    	else {
+    		return s3;
+    	}    	
     }
 
     // Return the sum of all numerical digits in the String
@@ -96,7 +115,13 @@ public class _01_StringMethods {
 
     // Call Utilities.encrypt at the bottom of this file to encrypt String s
     public static String encrypt(String s, char key) {
-        return null;
+    	
+    	Character.getNumericValue(key);
+    	
+    	byte e = 0;
+    	Utilities.encrypt(null, e);
+    	
+        return s;
     }
 
     // Call Utilities.decrypt at the bottom of this file to decrypt the
