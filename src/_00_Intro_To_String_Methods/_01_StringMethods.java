@@ -116,38 +116,83 @@ public class _01_StringMethods {
     // Call Utilities.encrypt at the bottom of this file to encrypt String s
     public static String encrypt(String s, char key) {
     	
-    	Character.getNumericValue(key);
+    	//int ee = Character.getNumericValue(key);
+    	byte key2 = (byte) key;
+    	byte[] s2 = null;
+    	String no = "";
     	
-    	byte e = 0;
-    	Utilities.encrypt(null, e);
+    	for(int i=0;i<s.length();i++) {
+    		s2[i] = (byte) s.charAt(i);
+    	}
     	
-        return s;
+    	Utilities.encrypt(s2, key2);
+    	
+    	for(int i=0;i<s2.length;i++) {
+    		no = no + s2[i];
+    	}
+    	    	    	
+        return no;
     }
 
     // Call Utilities.decrypt at the bottom of this file to decrypt the
     // cyphertext (encrypted text)
     public static String decrypt(String s, char key) {
-        return null;
+    	
+    	byte e = 0;
+    	Utilities.decrypt(s, e);
+    	
+        return s;
     }
 
     // Return the number of words in String s that end with String substring
     // You can assume there are no punctuation marks between words
     public static int wordsEndsWithSubstring(String s, String substring) {
-        return 0;
+    	
+    	String[] s2 = s.split(" ");
+    	int words = 0;
+    	
+    	for(int i=0;i<s2.length;i++) {
+    		if(s2[i].contains(substring)) {
+    			words++;
+    		}
+    	}
+    	
+        return words;
     }
 
     // Given String s, return the number of characters between the first
     // occurrence of String substring and the final occurrence
     // You can assume that substring will appear at least twice
     public static int distance(String s, String substring) {
-        return 0;
+    	
+    	int first = s.indexOf(substring) + substring.length();
+    	int last = s.lastIndexOf(substring);
+    	
+        return last-first;
     }
 
     // Return true if String s is a palindrome
     // palindromes are words or phrases are read the same forward as backward.
     // HINT: ignore/remove all punctuation and spaces in the String
     public static boolean palindrome(String s) {
-        return true;
+    	
+    	//System.out.println(s);
+    	String og = s;
+    	s.toLowerCase();
+    	char[] chars = null;
+    	String news = null;
+    	
+    	for(int i=0;i<s.length();i++) {
+    		chars[i] = s.charAt(i);
+    	}
+    	for(int i=s.length();i>0;i--) {
+    		news = news + chars[i];
+    	}
+    	if(s.equals(news)) {
+    		return true;
+    	}
+    	
+        return false;
     }
 }
 
