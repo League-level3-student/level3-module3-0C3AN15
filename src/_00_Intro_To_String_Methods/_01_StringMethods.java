@@ -115,33 +115,17 @@ public class _01_StringMethods {
 
     // Call Utilities.encrypt at the bottom of this file to encrypt String s
     public static String encrypt(String s, char key) {
-    	
-    	//int ee = Character.getNumericValue(key);
-    	byte key2 = (byte) key;
-    	byte[] s2 = null;
-    	String no = "";
-    	
-    	for(int i=0;i<s.length();i++) {
-    		s2[i] = (byte) s.charAt(i);
-    	}
-    	
-    	Utilities.encrypt(s2, key2);
-    	
-    	for(int i=0;i<s2.length;i++) {
-    		no = no + s2[i];
-    	}
-    	    	    	
-        return no;
+  
+    	byte[] s2 = s.getBytes();
+
+    	return Utilities.encrypt(s2, (byte)key);
     }
 
     // Call Utilities.decrypt at the bottom of this file to decrypt the
     // cyphertext (encrypted text)
     public static String decrypt(String s, char key) {
     	
-    	byte e = 0;
-    	Utilities.decrypt(s, e);
-    	
-        return s;
+        return Utilities.decrypt(s, (byte)key);
     }
 
     // Return the number of words in String s that end with String substring
@@ -152,7 +136,10 @@ public class _01_StringMethods {
     	int words = 0;
     	
     	for(int i=0;i<s2.length;i++) {
-    		if(s2[i].contains(substring)) {
+    		s2[i] = s2[i] + " ";
+    	}
+    	for(int i=0;i<s2.length;i++) {
+    		if(s2[i].contains(substring + " ")) {
     			words++;
     		}
     	}
@@ -176,9 +163,9 @@ public class _01_StringMethods {
     // HINT: ignore/remove all punctuation and spaces in the String
     public static boolean palindrome(String s) {
     	
-    	//System.out.println(s);
-    	String og = s;
-    	s.toLowerCase();
+    	s.toLowerCase(); //dont work???
+    	s.trim();
+    	System.out.println(s);
     	char[] chars = null;
     	String news = null;
     	
@@ -188,10 +175,11 @@ public class _01_StringMethods {
     	for(int i=s.length();i>0;i--) {
     		news = news + chars[i];
     	}
+    	System.out.println(news);
+    	
     	if(s.equals(news)) {
     		return true;
     	}
-    	
         return false;
     }
 }
