@@ -4,7 +4,16 @@ package _01_StringBuilder;
 public class _03_StringBuilder {
     
     public static String append(String str, char[] characters) {
-        return null;
+    	StringBuilder builder = new StringBuilder(str);
+    	String end = "";
+    	
+    	for(int i=0;i<characters.length;i++) {
+    		end = end + characters[i];
+    	}
+    	String newstr = builder.append(end).toString();
+    	System.out.println(newstr);
+    	
+        return newstr;
     }
     
     public static String reverse(String str) {

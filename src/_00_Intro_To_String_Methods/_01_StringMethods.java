@@ -163,21 +163,27 @@ public class _01_StringMethods {
     // HINT: ignore/remove all punctuation and spaces in the String
     public static boolean palindrome(String s) {
     	
-    	s.toLowerCase(); //dont work???
-    	s.trim();
-    	System.out.println(s);
-    	char[] chars = null;
-    	String news = null;
+    	String og = s.replace(" ", "");
+    	og = og.trim();
+    	og = og.toLowerCase();
+    	og = og.replace("?", "");
+    	og = og.replace(",", "");
+    	og = og.replace("-", "");
+    	og = og.replace(":", "");
+    	og = og.replace(".", "");
     	
-    	for(int i=0;i<s.length();i++) {
-    		chars[i] = s.charAt(i);
-    	}
-    	for(int i=s.length();i>0;i--) {
+    	String e = og;
+    	System.out.println(e + " " + og);
+    	char[] chars = e.toCharArray();
+    	String news = "";
+    	
+    	for(int i=chars.length-1;i>-1;i--) {
     		news = news + chars[i];
     	}
     	System.out.println(news);
     	
-    	if(s.equals(news)) {
+    	if(og.equalsIgnoreCase(news)) {
+    		System.out.println("true");
     		return true;
     	}
         return false;
