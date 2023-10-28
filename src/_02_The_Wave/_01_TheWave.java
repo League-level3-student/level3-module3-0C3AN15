@@ -21,6 +21,16 @@ public class _01_TheWave {
     
     public static ArrayList<String> wave(String str) {
         
-        return null;
+    	StringBuilder builder = new StringBuilder(str);
+    	ArrayList<String> newstr = null;
+    	
+    	for(int i=0;i<str.length();i++) {
+    		char temp = Character.toUpperCase(builder.charAt(i));
+    		String temp2 = "" + temp;
+    		newstr.add("Hello");
+    	}
+    	System.out.println(newstr);
+    	
+        return newstr;
     }
 }
