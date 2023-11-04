@@ -27,7 +27,13 @@ public class _01_TheWave {
     	for(int i=0;i<str.length();i++) {
     		char temp = Character.toUpperCase(builder.charAt(i));
     		String temp2 = "" + temp;
-    		newstr.add("Hello");
+    		
+    		if(temp2 == " ") {
+    			
+    		}
+    		else {
+    		//newstr.add("Hello");
+    		}
     	}
     	System.out.println(newstr);
     	
