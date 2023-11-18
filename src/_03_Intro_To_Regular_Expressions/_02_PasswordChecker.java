@@ -26,21 +26,33 @@ public class _02_PasswordChecker implements KeyListener {
      */
     static final String regexCriteria1 = "";
 
+    String regEx = "[//w]]{8,}";
+    String output = regexCriteria1.replaceAll(regEx, " + ");
+    
     /*
      * 2. Check there is at least 1 number, i.e. a digit 0-9
      */
     static final String regexCriteria2 = "";
+    
+    String regEx2 = "[0-9]";
+    String output2 = regexCriteria2.replaceAll(regEx, " + ");
 
     /*
      * 3. Check there is at least 1 capital letter
      */
     static final String regexCriteria3 = "";
+    
+    String regEx3 = "[A-Z]";
+    String output3 = regexCriteria3.replaceAll(regEx, " + ");
 
     /*
      * 4. Check there is at least 1 special character, where special
      * characters are one of the following, @#$%^&-+=()
      */
     static final String regexCriteria4 = "";
+    
+    String regEx4 = "@#$%^&-+=()";
+    String output4 = regexCriteria4.replaceAll(regEx, " + ");
     
     /*
      * *BONUS* Add more password criteria. Some suggestions are:
