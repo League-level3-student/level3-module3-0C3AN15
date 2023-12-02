@@ -42,9 +42,9 @@ public class _02_PasswordChecker implements KeyListener {
      */
     static final String regexCriteria3 = "";
     
-    String regEx3 = "[A-Z]";
-    String output3 = regexCriteria3.replaceAll(regEx, " + ");
-
+    String regEx3 = "[A-Z]"; //                                               /\  /\  /\  /\  /\  /\  /\  /\  /\  /\  /\  /\  /\  /\
+    String output3 = regexCriteria3.replaceAll(regEx, " + ");                //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
+ //                                                                             \/  \/  \/  \/  \/  \/  \/  \/  \/  \/  \/  \/  \/
     /*
      * 4. Check there is at least 1 special character, where special
      * characters are one of the following, @#$%^&-+=()
