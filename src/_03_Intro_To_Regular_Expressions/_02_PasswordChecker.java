@@ -24,35 +24,35 @@ public class _02_PasswordChecker implements KeyListener {
     /*
      * 1. Check a minimum of 8 characters
      */
-    static final String regexCriteria1 = "";
+    static final String regexCriteria1 = ".{8,}";
 
-    String regEx = "[//w]]{8,}";
-    String output = regexCriteria1.replaceAll(regEx, " + ");
+    //String regEx = "[//w]]{8,}";
+    //String output = regexCriteria1.replaceAll(regEx, " + ");
     
     /*
      * 2. Check there is at least 1 number, i.e. a digit 0-9
      */
-    static final String regexCriteria2 = "";
+    static final String regexCriteria2 = "[0-9]";
     
-    String regEx2 = "[0-9]";
-    String output2 = regexCriteria2.replaceAll(regEx, " + ");
+    //String regEx2 = "[0-9]";
+    //String output2 = regexCriteria2.replaceAll(regEx2, " + ");
 
     /*
      * 3. Check there is at least 1 capital letter
      */
-    static final String regexCriteria3 = "";
+    static final String regexCriteria3 = "[A-Z]";
     
-    String regEx3 = "[A-Z]"; //                                               /\  /\  /\  /\  /\  /\  /\  /\  /\  /\  /\  /\  /\  /\
-    String output3 = regexCriteria3.replaceAll(regEx, " + ");                //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
- //                                                                             \/  \/  \/  \/  \/  \/  \/  \/  \/  \/  \/  \/  \/
+    //String regEx3 = "[A-Z]";
+    //String output3 = regexCriteria3.replaceAll(regEx3, " + ");
+ //
     /*
      * 4. Check there is at least 1 special character, where special
      * characters are one of the following, @#$%^&-+=()
      */
-    static final String regexCriteria4 = "";
+    static final String regexCriteria4 = "[@#$%^&-+=()]";
     
-    String regEx4 = "@#$%^&-+=()";
-    String output4 = regexCriteria4.replaceAll(regEx, " + ");
+    //String regEx4 = "@#$%^&-+=()";
+    //String output4 = regexCriteria4.replaceAll(regEx4, " + ");
     
     /*
      * *BONUS* Add more password criteria. Some suggestions are:
